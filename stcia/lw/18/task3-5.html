@@ -1,0 +1,23 @@
+<form id="matchForm" onsubmit="return matchPattern()">
+    <label for="inputText">Введите текст с датами:</label>
+    <input type="text" id="inputText" name="inputText" placeholder="Пример: 2024-12-31"><br><br>
+    <button type="submit">Найти даты</button>
+</form>
+
+<script>
+    function matchPattern() {
+        var inputText = document.getElementById("inputText").value;
+        
+        // Регулярное выражение для поиска даты в формате YYYY-MM-DD
+        var datePattern = /\d{4}-\d{2}-\d{2}/g;
+
+        var matches = inputText.match(datePattern);
+
+        if (matches) {
+            alert("Найденные даты: " + matches.join(", "));
+        } else {
+            alert("Даты не найдены.");
+        }
+        return false;
+    }
+</script>

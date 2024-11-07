@@ -1,0 +1,17 @@
+<form id="splitForm" onsubmit="return splitText()">
+    <label for="inputText">Введите строку для разделения:</label>
+    <input type="text" id="inputText" name="inputText" placeholder="apple, banana, cherry"><br><br>
+    <button type="submit">Разделить</button>
+</form>
+
+<script>
+    function splitText() {
+        var inputText = document.getElementById("inputText").value;
+        
+        // Разделение строки по запятой
+        var words = inputText.split(/,\s*/);
+
+        alert("Разделенные слова: " + words.join(", "));
+        return false;
+    }
+</script>

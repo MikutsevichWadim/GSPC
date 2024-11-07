@@ -1,0 +1,21 @@
+<form id="phoneForm" onsubmit="return validatePhone()">
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" name="phone" placeholder="+7-123-456-78-90"><br><br>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    function validatePhone() {
+        var phone = document.getElementById("phone").value;
+        
+        // Регулярное выражение для валидации телефонного номера
+        var phonePattern = /^\+7-\d{3}-\d{3}-\d{2}-\d{2}$/;
+
+        if (!phonePattern.test(phone)) {
+            alert("Введите номер телефона в формате: +7-123-456-78-90");
+            return false;
+        }
+
+        return true;
+    }
+</script>

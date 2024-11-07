@@ -1,0 +1,21 @@
+<form id="passwordForm" onsubmit="return validatePassword()">
+    <label for="password">Пароль:</label>
+    <input type="password" id="password" name="password"><br><br>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    function validatePassword() {
+        var password = document.getElementById("password").value;
+        
+        // Регулярное выражение для валидации пароля
+        var passwordPattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*]).{8,20}$/;
+
+        if (!passwordPattern.test(password)) {
+            alert("Пароль должен содержать хотя бы одну заглавную букву, одну строчную, одну цифру и один специальный символ. Длина от 8 до 20 символов.");
+            return false;
+        }
+
+        return true;
+    }
+</script>

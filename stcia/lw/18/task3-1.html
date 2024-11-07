@@ -1,0 +1,21 @@
+<form id="emailForm" onsubmit="return validateEmail()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    function validateEmail() {
+        var email = document.getElementById("email").value;
+        
+        // Регулярное выражение для валидации email
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+
+        if (!emailPattern.test(email)) {
+            alert("Введите корректный адрес электронной почты.");
+            return false;
+        }
+
+        return true;
+    }
+</script>

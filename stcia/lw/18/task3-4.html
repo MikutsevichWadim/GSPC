@@ -1,0 +1,17 @@
+<form id="replaceForm" onsubmit="return replaceText()">
+    <label for="inputText">Введите текст:</label>
+    <input type="text" id="inputText" name="inputText"><br><br>
+    <button type="submit">Заменить</button>
+</form>
+
+<script>
+    function replaceText() {
+        var inputText = document.getElementById("inputText").value;
+        
+        // Заменить все вхождения слова "apple" на "orange"
+        var replacedText = inputText.replace(/apple/gi, "orange");
+
+        alert("Текст после замены: " + replacedText);
+        return false;
+    }
+</script>

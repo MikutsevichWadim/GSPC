@@ -1,0 +1,22 @@
+<form id="userForm" onsubmit="return validateForm()">
+    <label for="phone">Телефон:</label>
+    <input type="text" id="phone" name="phone"><br><br>
+
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    function validateForm() {
+        var phone = document.getElementById("phone").value;
+        
+        // Регулярное выражение для телефона (формат: +123-456-7890)
+        var phonePattern = /^\+\d{1,3}-\d{1,4}-\d{1,4}-\d{1,4}$/;
+
+        if (!phonePattern.test(phone)) {
+            alert("Введите телефон в правильном формате: +123-456-7890");
+            return false;
+        }
+
+        return true;
+    }
+</script>
