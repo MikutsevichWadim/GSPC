@@ -1,0 +1,38 @@
+<form id="userForm">
+    <label>ФИО: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Дата рождения: <input type="date" name="birthdate"></label><br>
+    <button type="button" onclick="saveToCookies()">Сохранить</button>
+    <button type="button" onclick="loadFromCookies()">Показать сохранённые данные</button>
+    <button type="button" onclick="clearCookies()">Очистить</button>
+  </form>
+  
+  <script>
+    function saveToCookies() {
+  const form = document.getElementById('userForm');
+  const data = new FormData(form);
+  data.forEach((value, key) => {
+    document.cookie = `${key}=${value}; path=/; max-age=3600`;
+  });
+  alert('Данные сохранены в COOKIE');
+}
+
+function loadFromCookies() {
+  const cookies = document.cookie.split('; ').reduce((acc, cookie) => {
+    const [key, value] = cookie.split('=');
+    acc[key] = value;
+    return acc;
+  }, {});
+  alert(`Данные из COOKIE:\nФИО: ${cookies.name}\nEmail: ${cookies.email}\nДата рождения: ${cookies.birthdate}`);
+}
+
+function clearCookies() {
+  const cookies = document.cookie.split('; ');
+  cookies.forEach(cookie => {
+    const key = cookie.split('=')[0];
+    document.cookie = `${key}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;`;
+  });
+  alert('COOKIE очищены');
+}
+
+  </script>

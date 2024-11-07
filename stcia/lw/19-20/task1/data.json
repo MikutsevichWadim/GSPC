@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "name": "Футболка",
+      "description": "Хлопковая футболка с принтом",
+      "price": 1200,
+      "stock": 10,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 2,
+      "name": "Кроссовки",
+      "description": "Кроссовки для бега",
+      "price": 4500,
+      "stock": 5,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 3,
+      "name": "Джинсы",
+      "description": "Модные джинсы скинни",
+      "price": 3000,
+      "stock": 8,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 4,
+      "name": "Куртка",
+      "description": "Тёплая зимняя куртка",
+      "price": 7000,
+      "stock": 4,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 5,
+      "name": "Рюкзак",
+      "description": "Городской рюкзак с отделением для ноутбука",
+      "price": 2000,
+      "stock": 15,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 6,
+      "name": "Часы",
+      "description": "Спортивные часы с пульсометром",
+      "price": 5500,
+      "stock": 7,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 7,
+      "name": "Очки",
+      "description": "Солнцезащитные очки с UV-защитой",
+      "price": 1200,
+      "stock": 20,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 8,
+      "name": "Бейсболка",
+      "description": "Классическая бейсболка",
+      "price": 800,
+      "stock": 12,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 9,
+      "name": "Кошелек",
+      "description": "Кожаный кошелек",
+      "price": 2500,
+      "stock": 10,
+      "image": "images/3125815.png"
+    },
+    {
+      "id": 10,
+      "name": "Ремень",
+      "description": "Кожаный ремень для джинсов",
+      "price": 1500,
+      "stock": 18,
+      "image": "images/3125815.png"
+    }
+  ]
+  

@@ -1,0 +1,33 @@
+<form id="userForm">
+    <label>ФИО: <input type="text" name="name" required></label><br>
+    <label>Email: <input type="email" name="email" required></label><br>
+    <label>Дата рождения: <input type="date" name="birthdate"></label><br>
+    <button type="button" onclick="saveToLocalStorage()">Сохранить в Local Storage</button>
+  <button type="button" onclick="loadFromLocalStorage()">Показать из Local Storage</button>
+  <button type="button" onclick="clearLocalStorage()">Очистить Local Storage</button>
+  </form>
+  
+
+<script>
+    function saveToLocalStorage() {
+  const form = document.getElementById('userForm');
+  const data = new FormData(form);
+  data.forEach((value, key) => {
+    localStorage.setItem(key, value);
+  });
+  alert('Данные сохранены в Local Storage');
+}
+
+function loadFromLocalStorage() {
+  const name = localStorage.getItem('name') || 'не указано';
+  const email = localStorage.getItem('email') || 'не указано';
+  const birthdate = localStorage.getItem('birthdate') || 'не указана';
+  alert(`Данные из Local Storage:\nФИО: ${name}\nEmail: ${email}\nДата рождения: ${birthdate}`);
+}
+
+function clearLocalStorage() {
+  localStorage.clear();
+  alert('Local Storage очищен');
+}
+
+</script>
